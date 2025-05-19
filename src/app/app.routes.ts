@@ -19,6 +19,10 @@ export const routes: Routes = [
       {
         path: 'form',
         loadComponent: () => import('plugin-lib').then(m => m.FormPageComponent)
+      },
+      {
+        path:'dashboard',
+        loadComponent: () => import('plugin-lib').then(m => m.DashboardPageComponent)
       }
     ]
   }

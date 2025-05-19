@@ -7,7 +7,19 @@ export const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: HomeComponent }
+      { path: '', component: HomeComponent },
+      {
+        path: 'plugin',
+        loadComponent: () => import('plugin-lib').then(m => m.PluginComponent)
+      },
+      {
+        path: 'plugin2',
+        loadComponent: () => import('plugin-lib').then(m => m.Plugin2Component)
+      },
+      {
+        path: 'form',
+        loadComponent: () => import('plugin-lib').then(m => m.FormPageComponent)
+      }
     ]
   }
 ];

@@ -1,0 +1,16 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">📦 Plugin UI</div>
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">🏠 Home</a>
+      <!-- Add plugin links here -->
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">🧩 Plugin Display Area</header>
+    <section class="page-content">
+      <router-outlet />
+    </section>
+  </main>
+</div>
